@@ -15,13 +15,18 @@ class EvaluationController extends Controller
             new Evaluation($request->all())
         );
 
-        return view('pages.show', compact('workplace'));
+        return view('pages.workplace', compact('workplace'));
         // return redirect('workplaces/'.$workplace->id);
     }
 
-    public function edit(Evaluation $evaluation)
+    public function edit(Evaluation $evaluation, Workplace $workplace)
     {
-        echo $evaluation;
-        return 'test';//view('pages.edit', compact('evaluation'));
+        return view('pages.edit', compact('evaluation'));
     }
+
+    public function update(Request $request, Workplace $workplace)
+    {
+        $this->update($request->all());
+
+        return view('pages.workplace', compact('workplace'));    }
 }

@@ -16,10 +16,10 @@ class WorkplaceController extends Controller
     	return view('pages.workplace', compact('workplace'));
     }
 
-    // public function show(Workplace $workplace)
-    // {
-    // 	return view('pages.workplace', compact('workplace'));
-    // }
+    public function show(Workplace $workplace)
+    {
+    	return view('pages.workplace', compact('workplace'));
+    }
 
 
 }

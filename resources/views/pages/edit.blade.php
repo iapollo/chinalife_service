@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-<h1>编辑基层服务评价</h1>
+<h2>编辑基层服务评价</h2>
 
 <form method="" action="">
 	{{csrf_field()}}

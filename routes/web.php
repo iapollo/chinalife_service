@@ -18,8 +18,8 @@
 Route::get('/', 'PagesController@home');
 Route::post('province', 'MechanismController@getCitybyProvince');
 Route::post('workplaces', 'WorkplaceController@find');
-Route::post('/workplaces/{workplace}', 'WorkplaceController@show');
+Route::post('workplaces/{workplace}', 'WorkplaceController@show');
 Route::post('workplaces/{workplace}/evaluations', 'EvaluationController@store');
 
 Route::get('evaluations/{evaluation}/edit', 'EvaluationController@edit');
-Route::post('');
+Route::patch('evaluations/{evaluation}', 'EvaluationController@update');

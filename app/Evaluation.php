@@ -14,4 +14,9 @@ class Evaluation extends Model
     {
     	return $this->belongsTo('App\Workplace', 'workplace_id', 'id');
     }
+
+    public function update(Request $request)
+    {
+
+    }
 }
