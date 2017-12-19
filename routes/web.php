@@ -15,11 +15,14 @@
 //     return view('welcome');
 // });
 
+//home
 Route::get('/', 'PagesController@home');
+//locate
 Route::post('province', 'MechanismController@getCitybyProvince');
 Route::post('workplaces', 'WorkplaceController@find');
-Route::post('workplaces/{workplace}', 'WorkplaceController@show');
+//add
 Route::post('workplaces/{workplace}/evaluations', 'EvaluationController@store');
-
+//edit 
 Route::get('evaluations/{evaluation}/edit', 'EvaluationController@edit');
 Route::patch('evaluations/{evaluation}', 'EvaluationController@update');
+Route::get('workplaces/{workplace}', 'WorkplaceController@show');

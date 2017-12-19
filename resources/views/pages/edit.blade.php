@@ -3,7 +3,8 @@
 @section('content')
 <h2>编辑基层服务评价</h2>
 
-<form method="" action="">
+<form method="POST" action="/evaluations/{{$evaluation->id}}">
+    {{method_field('patch')}}
 	{{csrf_field()}}
     <label>满意度：</label>
     <select name="satisfaction">

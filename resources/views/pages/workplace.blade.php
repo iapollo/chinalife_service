@@ -53,7 +53,7 @@
 
 		        <h5>意见和建议</h5>
 		        <div class="form-group">
-		            <textarea name="evaluations" class="form-control"></textarea>
+		            <textarea name="evaluations" class="form-control">{{old('evaluations')}}</textarea>
 		        </div>
 
 		        <div class="form-group">
@@ -61,9 +61,14 @@
 		        </div>
 	        </fieldset>
 	    </form>
+	    @if(count($errors))
+	        <ul>
+	        	@foreach($errors->all() as $error)
+	        	    <li style="color:red;">{{$error}}</li>
+	        	@endforeach
+	        </ul>
+	    @endif
     </div>
 </div>
-
-
 
 @endsection
