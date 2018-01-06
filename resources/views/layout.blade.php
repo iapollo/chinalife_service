@@ -8,8 +8,12 @@
     <!-- <link rel="stylesheet" href="/css/style.css"／> -->
     <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
 
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
+
      <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
 
     @yield('header')
 </head>

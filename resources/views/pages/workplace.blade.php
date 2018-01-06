@@ -39,6 +39,7 @@
 		            <option value=3>第三季度</option>
 		            <option value=4>第四季度</option>
 		        </select>
+		        <p class="form-control-static text-danger">{{$errors->first('season')}}</p>
 
 		        <h5>请选择服务满意度</h5>
 		        <label>满意度：</label>
@@ -49,25 +50,30 @@
 		            <option value="较为满意">较为满意</option>
 		            <option value="一般">一般</option>
 		            <option value="不满意">不满意</option>
-		        </select> 
+		        </select>
+		        <p class="form-control-static text-danger">{{$errors->first('satisfaction')}}</p>
 
 		        <h5>意见和建议</h5>
 		        <div class="form-group">
-		            <textarea name="evaluations" class="form-control">{{old('evaluations')}}</textarea>
+		            <textarea name="evaluations" class="form-control">{{old('evaluations')}}</textarea>		        	
+		            <p class="form-control-static text-danger">{{$errors->first('evaluations')}}</p>
 		        </div>
+
+
 
 		        <div class="form-group">
 		            <button type="submit" class="btn btn-primary">提交</button>
 		        </div>
+
 	        </fieldset>
 	    </form>
-	    @if(count($errors))
+<!-- 	    @if(count($errors))
 	        <ul>
 	        	@foreach($errors->all() as $error)
 	        	    <li style="color:red;">{{$error}}</li>
 	        	@endforeach
 	        </ul>
-	    @endif
+	    @endif -->
     </div>
 </div>
 

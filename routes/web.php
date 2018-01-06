@@ -18,7 +18,10 @@
 //home
 Route::get('/', 'PagesController@home');
 //locate
+Route::post('test', 'MechanismController@response');
 Route::post('province', 'MechanismController@getCitybyProvince');
+Route::post('city', 'MechanismController@getCountybyCity');
+Route::post('county', 'MechanismController@getWorkplacebyCounty');
 Route::post('workplaces', 'WorkplaceController@find');
 //add
 Route::post('workplaces/{workplace}/evaluations', 'EvaluationController@store');
